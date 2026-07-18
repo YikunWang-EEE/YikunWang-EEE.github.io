@@ -113,6 +113,11 @@ h1 { margin: 0; font-size: clamp(56px, 7vw, 78px); font-weight: 800; line-height
 .paper-note { margin-top: 7px; }
 .paper-links { display: flex; gap: 7px; margin-top: 11px; }
 .paper-links a { padding: 3px 8px; border: 1px solid var(--line); border-radius: 4px; background: white; font-family: var(--mono); font-size: 9px; font-weight: 800; text-decoration: none; text-transform: lowercase; }
+.publication-toggle { display: flex; justify-content: center; padding-top: 20px; }
+.show-more-button { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 7px 14px; border: 1px solid #cfc4df; border-radius: 5px; background: var(--purple-soft); color: var(--purple); font-family: var(--mono); font-size: 10px; font-weight: 700; cursor: pointer; }
+.show-more-button:hover { border-color: var(--purple); background: white; }
+.show-more-icon { font-size: 13px; transition: transform 160ms ease; }
+.show-more-button[aria-expanded="true"] .show-more-icon { transform: rotate(180deg); }
 .publication-note { margin: 15px 0 0 64px; color: #777b82; font-family: var(--mono); font-size: 9px; }
 
 .open-source-section { width: 100%; max-width: none; padding-right: max(18px, calc((100% - var(--max)) / 2)); padding-left: max(18px, calc((100% - var(--max)) / 2)); background: #f4f1f8; border-top: 1px solid #ddd5e8; border-bottom: 1px solid #ddd5e8; }

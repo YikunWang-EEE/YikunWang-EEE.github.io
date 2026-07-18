@@ -7,8 +7,8 @@
   <meta name="theme-color" content="#fafaf7">
   <title>Yikun Wang | HKU ECE</title>
   <link rel="icon" href="assets/images/yikun-portrait.jpg" type="image/jpeg">
-  <link rel="stylesheet" href="styles.css?v=20260718-4">
-  <script src="script.js?v=20260718-4" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260718-5">
+  <script src="script.js?v=20260718-5" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -129,7 +129,7 @@
         <button class="filter-button" type="button" data-filter="accepted" aria-pressed="false">Accepted <span>6</span></button>
         <button class="filter-button" type="button" data-filter="review" aria-pressed="false">In review <span>2</span></button>
       </div>
-      <ol class="publication-list">
+      <ol class="publication-list" id="publication-list">
         <li class="publication has-media" data-categories="accepted">
           <div class="publication-year">2026</div>
           <div class="publication-media"><img src="assets/images/lags-system.png" alt="Low-altitude Gaussian Splatting system overview" loading="lazy"></div>
@@ -187,8 +187,9 @@
             <div class="paper-links"><a href="https://arxiv.org/abs/2601.21346" target="_blank" rel="noreferrer">arXiv</a></div>
           </div>
         </li>
-        <li class="publication" data-categories="accepted">
+        <li class="publication has-media" data-categories="accepted">
           <div class="publication-year">2026</div>
+          <div class="publication-media"><img src="assets/images/dpnet-framework.png" alt="DPNet framework combining Doppler velocity rectification, D-KalmanNet, and dynamic motion planning" loading="lazy"></div>
           <div class="publication-body">
             <div class="publication-topline"><span class="status status-accepted">IEEE RA-L</span></div>
             <h3>DPNet: Doppler LiDAR Motion Planning for Highly-Dynamic Environments</h3>
@@ -213,6 +214,12 @@
           </div>
         </li>
       </ol>
+      <div class="publication-toggle">
+        <button class="show-more-button" type="button" aria-expanded="false" aria-controls="publication-list">
+          <span class="show-more-label">Show more</span>
+          <span class="show-more-icon" aria-hidden="true">↓</span>
+        </button>
+      </div>
       <p class="publication-note">* Names in bold indicate Yikun Wang. Publication status reflects the provided CV and public records as of July 2026.</p>
     </section>
 
