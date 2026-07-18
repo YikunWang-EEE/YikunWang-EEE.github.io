@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Yikun Wang is an M.Phil. researcher at The University of Hong Kong working on learning-based optimization, wireless systems, robotics, and 3D Gaussian Splatting.">
-  <meta name="theme-color" content="#8f1736">
+  <meta name="theme-color" content="#fafaf7">
   <title>Yikun Wang | HKU ECE</title>
-  <link rel="icon" href="assets/images/image1.jpeg" type="image/jpeg">
+  <link rel="icon" href="assets/images/yikun-portrait.jpg" type="image/jpeg">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
@@ -33,11 +33,27 @@
 
   <main id="main">
     <section class="intro" id="bio" aria-labelledby="intro-title">
-      <div class="intro-copy">
-        <p class="eyebrow">M.Phil. Researcher · HKU ECE</p>
+      <div class="intro-heading">
+        <p class="eyebrow">🎓 M.Phil. Researcher @ HKU ECE</p>
         <h1 id="intro-title">Yikun Wang</h1>
-        <p class="intro-lede">I build learning systems that turn difficult optimization problems into fast, deployable decisions.</p>
+        <p class="intro-lede">Wireless intelligence · learning to optimize · spatial reconstruction</p>
+      </div>
+      <div class="portrait-wrap">
+        <div class="portrait-rule" aria-hidden="true"></div>
+        <img src="assets/images/yikun-portrait.jpg" alt="Yikun Wang by the sea at sunset" width="1200" height="1800">
+        <p><strong>Hello from Hong Kong 👋</strong><br>ECE @ The University of Hong Kong</p>
+      </div>
+      <div class="intro-copy">
         <p class="bio-copy">I am an M.Phil. student in Electrical and Computer Engineering at <a href="https://www.hku.hk/" target="_blank" rel="noreferrer">The University of Hong Kong</a>, advised by <a href="https://www.eee.hku.hk/~ycwu/" target="_blank" rel="noreferrer">Prof. Yik-Chung Wu</a>. I received my B.E. in Electronic Information Engineering from Beihang University. My research spans learning-based optimization for wireless systems, low-altitude 3D reconstruction, and motion planning in highly dynamic environments.</p>
+        <div class="bio-experience">
+          <div class="experience-icon" aria-hidden="true">⌨️</div>
+          <div>
+            <p class="mini-label">Work Experience</p>
+            <h2>Visiting Research Assistant</h2>
+            <p><strong>Great Bay University (GBU)</strong> &amp; <strong>Shenzhen Research Institute of Big Data (SRIBD)</strong> · Dec 2024–Apr 2026</p>
+            <p>Worked with <a href="https://liyangblade.github.io/" target="_blank" rel="noreferrer">Prof. Yang Li</a> on cell-free wireless systems, learning-based combinatorial optimization, and vector-quantized CSI compression and precoding.</p>
+          </div>
+        </div>
         <div class="intro-actions" aria-label="Profile links">
           <a class="button button-primary" href="mailto:ykwang@eee.hku.hk">Email me</a>
           <a class="button button-secondary" href="https://github.com/YikunWang-EEE" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
@@ -50,17 +66,12 @@
           <li>Robotics</li>
         </ul>
       </div>
-      <div class="portrait-wrap">
-        <div class="portrait-rule" aria-hidden="true"></div>
-        <img src="assets/images/image1.jpeg" alt="Portrait of Yikun Wang" width="180" height="240">
-        <p><strong>Based in Hong Kong</strong><br>Department of Electrical and Computer Engineering</p>
-      </div>
       <a class="section-cue" href="#news" aria-label="Continue to news"><span>Latest</span><span aria-hidden="true">↓</span></a>
     </section>
 
     <section class="section news-section" id="news" aria-labelledby="news-title">
       <div class="section-heading">
-        <p class="section-index">01</p>
+        <p class="section-index" aria-hidden="true">🔥</p>
         <div>
           <p class="eyebrow">Updates</p>
           <h2 id="news-title">News</h2>
@@ -95,7 +106,7 @@
 
     <section class="section" id="publications" aria-labelledby="publications-title">
       <div class="section-heading">
-        <p class="section-index">02</p>
+        <p class="section-index" aria-hidden="true">📄</p>
         <div>
           <p class="eyebrow">Selected work</p>
           <h2 id="publications-title">Publications</h2>
@@ -108,8 +119,9 @@
         <button class="filter-button" type="button" data-filter="review" aria-pressed="false">In review <span>3</span></button>
       </div>
       <ol class="publication-list">
-        <li class="publication" data-categories="first review">
+        <li class="publication has-media" data-categories="first review">
           <div class="publication-year">2026</div>
+          <div class="publication-media"><img src="assets/images/cf-framework.png" alt="Framework for mixed-discrete cell-free wireless optimization" loading="lazy"></div>
           <div class="publication-body">
             <div class="publication-topline"><span class="status status-review">Under review · IEEE TWC</span><span class="author-role">First author</span></div>
             <h3>A General Deep Learning Framework for Wireless Resource Allocation under Discrete Constraints</h3>
@@ -118,8 +130,9 @@
             <div class="paper-links"><a href="https://arxiv.org/abs/2603.19322" target="_blank" rel="noreferrer">arXiv</a><a href="https://github.com/YikunWang-EEE/User_Association_Beamforming_Cell_Free_Learning" target="_blank" rel="noreferrer">Code</a></div>
           </div>
         </li>
-        <li class="publication" data-categories="first accepted">
+        <li class="publication has-media" data-categories="first accepted">
           <div class="publication-year">2026</div>
+          <div class="publication-media"><img src="assets/images/ma-framework.png" alt="Movable antenna positioning and beamforming framework" loading="lazy"></div>
           <div class="publication-body">
             <div class="publication-topline"><span class="status status-accepted">IEEE ICC</span><span class="author-role">First author</span></div>
             <h3>Learning to Jointly Optimize Antenna Positioning and Beamforming for Movable Antenna-Aided Systems</h3>
@@ -127,8 +140,9 @@
             <div class="paper-links"><a href="https://arxiv.org/abs/2603.16449" target="_blank" rel="noreferrer">arXiv</a><a href="https://github.com/YikunWang-EEE/RL-MA-joint-APS-and-BF" target="_blank" rel="noreferrer">Code</a></div>
           </div>
         </li>
-        <li class="publication" data-categories="first review">
+        <li class="publication has-media" data-categories="first review">
           <div class="publication-year">2026</div>
+          <div class="publication-media"><img src="assets/images/lags-system.png" alt="Low-altitude Gaussian Splatting system overview" loading="lazy"></div>
           <div class="publication-body">
             <div class="publication-topline"><span class="status status-review">Major revision · IEEE TVT</span><span class="author-role">First author</span></div>
             <h3>LAGS: Low-Altitude Gaussian Splatting with Groupwise Heterogeneous Graph Learning</h3>
@@ -193,7 +207,7 @@
 
     <section class="section open-source-section" id="opensource" aria-labelledby="opensource-title">
       <div class="section-heading">
-        <p class="section-index">03</p>
+        <p class="section-index" aria-hidden="true">⌨️</p>
         <div><p class="eyebrow">Reproducible research</p><h2 id="opensource-title">Open Source</h2></div>
       </div>
       <div class="project-grid">
@@ -230,7 +244,7 @@
 
     <section class="section" id="gallery" aria-labelledby="gallery-title">
       <div class="section-heading">
-        <p class="section-index">04</p>
+        <p class="section-index" aria-hidden="true">📸</p>
         <div><p class="eyebrow">Research in view</p><h2 id="gallery-title">Gallery</h2></div>
       </div>
       <div class="gallery-grid">
@@ -246,17 +260,16 @@
           <img src="assets/images/cf-results.png" alt="Cell-free MIMO sum-rate results chart" loading="lazy">
           <span><strong>Optimization at scale</strong><small>Cell-free MIMO · 2026</small></span>
         </button>
-        <div class="gallery-placeholder" aria-label="Personal and academic life photos coming soon">
-          <p class="eyebrow">Beyond the lab</p>
-          <strong>Music, performance,<br>and academic life</strong>
-          <small>Photo collection coming soon</small>
-        </div>
+        <button class="gallery-item gallery-personal" type="button" data-full="assets/images/yikun-portrait.jpg" data-caption="Sunset by the sea, 2025">
+          <img src="assets/images/yikun-portrait.jpg" alt="Yikun Wang standing by the sea at sunset" loading="lazy">
+          <span><strong>Beyond the lab</strong><small>Hong Kong · 2025</small></span>
+        </button>
       </div>
     </section>
 
     <section class="section cv-section" id="cv" aria-labelledby="cv-title">
       <div class="section-heading">
-        <p class="section-index">05</p>
+        <p class="section-index" aria-hidden="true">📖</p>
         <div><p class="eyebrow">Background</p><h2 id="cv-title">Curriculum Vitae</h2></div>
       </div>
       <div class="cv-layout">
