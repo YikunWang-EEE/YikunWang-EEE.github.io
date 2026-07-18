@@ -16,7 +16,8 @@ Then open `http://localhost:8000`.
 - `styles.css`: colors, typography, layout, responsive behavior, and print styling
 - `script.js`: mobile navigation, publication filters, active section state, gallery preview, and printing
 - `assets/images/`: portrait and research visuals
-- `cv.html`: full English CV with print/PDF styling
+- `cv.html`: editable source for the English CV
+- `assets/cv/Yikun_Wang_CV.pdf`: downloadable PDF CV
 
 Search for `coming soon` or `to be added` to find intentional placeholders. Publication status and the news timeline should be reviewed whenever a submission changes state.
 
