@@ -1,0 +1,24 @@
+:root { --ink:#17181a; --muted:#5d6266; --line:#cfd1ce; --red:#8f1736; --teal:#16766e; }
+* { box-sizing: border-box; }
+body { width: min(calc(100% - 40px), 900px); margin: 54px auto 100px; color: var(--ink); font-family: Arial, sans-serif; font-size: 14px; line-height: 1.55; letter-spacing: 0; }
+a { color: var(--red); text-underline-offset: 3px; }
+.cv-header { display:grid; grid-template-columns:1fr auto; gap:40px; align-items:end; padding-bottom:25px; border-bottom:3px solid var(--red); }
+.kicker { margin:0 0 4px; color:var(--red); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+h1 { margin:0; font-family:Georgia,serif; font-size:54px; font-weight:400; line-height:1; letter-spacing:0; }
+.cv-header p { margin:10px 0 0; color:var(--muted); }
+address { font-style:normal; font-size:12px; text-align:right; }
+section { padding:28px 0 4px; }
+h2 { margin:0 0 13px; color:var(--teal); font-size:12px; letter-spacing:.11em; text-transform:uppercase; }
+h3 { margin:0; font-family:Georgia,serif; font-size:18px; font-weight:400; }
+p { margin:0; }
+.entry { display:grid; grid-template-columns:1fr auto; gap:20px; padding:13px 0; border-top:1px solid var(--line); }
+.entry p { color:var(--muted); font-size:13px; }
+time { color:var(--muted); font-family:Georgia,serif; white-space:nowrap; }
+.papers { margin:0; padding:0 0 0 22px; }
+.papers li { padding:7px 0 7px 5px; border-top:1px solid var(--line); }
+.two-column { display:grid; grid-template-columns:1fr 1fr; gap:50px; }
+.screen-actions { position:fixed; right:22px; bottom:20px; display:flex; gap:8px; padding:8px; background:white; border:1px solid var(--line); box-shadow:0 10px 30px rgba(0,0,0,.12); }
+.screen-actions a, .screen-actions button { min-height:38px; padding:8px 13px; border:1px solid var(--ink); background:white; color:var(--ink); font:700 12px Arial,sans-serif; text-decoration:none; cursor:pointer; }
+.screen-actions button { border-color:var(--red); background:var(--red); color:white; }
+@media(max-width:620px){ body{margin-top:30px}.cv-header{grid-template-columns:1fr}.cv-header address{text-align:left}.entry{grid-template-columns:1fr}.two-column{grid-template-columns:1fr;gap:18px}.screen-actions{right:10px;bottom:10px;left:10px;justify-content:center} }
+@media print { @page{size:A4;margin:16mm 17mm} body{width:auto;margin:0;font-size:10pt}.cv-header{padding-bottom:14px}h1{font-size:33pt}section{padding-top:14px}.entry{padding:7px 0}.papers li{padding:4px 0 4px 4px}.screen-actions{display:none}a{color:inherit;text-decoration:none} }
