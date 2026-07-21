@@ -76,23 +76,4 @@ showMoreButton?.addEventListener('click', () => {
 
 renderPublications();
 
-const lightbox = document.querySelector('.lightbox');
-const lightboxImage = lightbox?.querySelector('img');
-const lightboxCaption = lightbox?.querySelector('p');
-document.querySelectorAll('.gallery-item').forEach((item) => {
-  item.addEventListener('click', () => {
-    lightboxImage.src = item.dataset.full;
-    lightboxImage.alt = item.querySelector('img').alt;
-    lightboxCaption.textContent = item.dataset.caption;
-    lightbox.showModal();
-    document.body.classList.add('lightbox-open');
-  });
-});
-lightbox?.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
-lightbox?.addEventListener('click', (event) => {
-  if (event.target === lightbox) lightbox.close();
-});
-lightbox?.addEventListener('close', () => document.body.classList.remove('lightbox-open'));
-
-document.querySelector('.print-button')?.addEventListener('click', () => window.print());
 document.querySelector('#year').textContent = new Date().getFullYear();
