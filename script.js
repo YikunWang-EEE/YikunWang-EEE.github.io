@@ -76,4 +76,112 @@ showMoreButton?.addEventListener('click', () => {
 
 renderPublications();
 
+const galleryRoot = document.querySelector('#gallery-collections');
+const albumDialog = document.querySelector('.album-dialog');
+const albumDialogGroup = albumDialog?.querySelector('#album-dialog-group');
+const albumDialogTitle = albumDialog?.querySelector('#album-dialog-title');
+const albumDialogMeta = albumDialog?.querySelector('.album-dialog-meta');
+const albumPhotoGrid = albumDialog?.querySelector('.album-photo-grid');
+const albumDialogClose = albumDialog?.querySelector('.album-dialog-close');
+
+const photoCountLabel = (count) => `${count} ${count === 1 ? 'photo' : 'photos'}`;
+
+const openAlbum = (collection, album) => {
+  if (!albumDialog || !albumPhotoGrid) return;
+
+  albumDialogGroup.textContent = collection.title;
+  albumDialogTitle.textContent = album.title;
+  albumDialogMeta.textContent = `${album.meta} · ${photoCountLabel(album.images.length)}`;
+  albumPhotoGrid.replaceChildren();
+
+  album.images.forEach((src, index) => {
+    const photo = document.createElement('figure');
+    const image = document.createElement('img');
+    const caption = document.createElement('figcaption');
+
+    photo.className = 'album-photo';
+    image.src = src;
+    image.alt = `${album.title}, photo ${index + 1} of ${album.images.length}`;
+    image.loading = index < 3 ? 'eager' : 'lazy';
+    image.decoding = 'async';
+    caption.textContent = `${String(index + 1).padStart(2, '0')} / ${String(album.images.length).padStart(2, '0')}`;
+    photo.append(image, caption);
+    albumPhotoGrid.append(photo);
+  });
+
+  albumDialog.showModal();
+  document.body.classList.add('album-open');
+};
+
+const renderGallery = () => {
+  const collections = Array.isArray(window.galleryCollections) ? window.galleryCollections : [];
+  if (!galleryRoot) return;
+
+  collections.forEach((collection) => {
+    const group = document.createElement('section');
+    const heading = document.createElement('div');
+    const headingCopy = document.createElement('div');
+    const eyebrow = document.createElement('p');
+    const title = document.createElement('h3');
+    const count = document.createElement('p');
+    const albumGrid = document.createElement('div');
+    const photoCount = collection.albums.reduce((total, album) => total + album.images.length, 0);
+
+    group.className = 'gallery-group';
+    group.setAttribute('aria-labelledby', `${collection.id}-title`);
+    heading.className = 'gallery-group-heading';
+    eyebrow.className = 'eyebrow';
+    eyebrow.textContent = collection.eyebrow;
+    title.id = `${collection.id}-title`;
+    title.textContent = collection.title;
+    count.className = 'gallery-group-count';
+    count.textContent = `${collection.albums.length} albums · ${photoCountLabel(photoCount)}`;
+    albumGrid.className = 'album-grid';
+
+    collection.albums.forEach((album) => {
+      const card = document.createElement('button');
+      const cover = document.createElement('span');
+      const coverImage = document.createElement('img');
+      const info = document.createElement('span');
+      const albumTitle = document.createElement('strong');
+      const albumMeta = document.createElement('small');
+
+      card.className = 'album-card';
+      card.type = 'button';
+      card.setAttribute('aria-haspopup', 'dialog');
+      card.setAttribute('aria-label', `Open ${album.title} album, ${photoCountLabel(album.images.length)}`);
+      cover.className = 'album-cover';
+      coverImage.src = album.cover || album.images[0];
+      coverImage.alt = '';
+      coverImage.loading = 'lazy';
+      coverImage.decoding = 'async';
+      info.className = 'album-info';
+      albumTitle.textContent = album.title;
+      albumMeta.textContent = `${album.meta} · ${photoCountLabel(album.images.length)}`;
+
+      cover.append(coverImage);
+      info.append(albumTitle, albumMeta);
+      card.append(cover, info);
+      card.addEventListener('click', () => openAlbum(collection, album));
+      albumGrid.append(card);
+    });
+
+    headingCopy.append(eyebrow, title);
+    heading.append(headingCopy, count);
+    group.append(heading, albumGrid);
+    galleryRoot.append(group);
+  });
+};
+
+renderGallery();
+
+albumDialogClose?.addEventListener('click', () => albumDialog.close());
+albumDialog?.addEventListener('click', (event) => {
+  if (event.target === albumDialog) albumDialog.close();
+});
+albumDialog?.addEventListener('close', () => {
+  document.body.classList.remove('album-open');
+  albumPhotoGrid?.replaceChildren();
+});
+
 document.querySelector('#year').textContent = new Date().getFullYear();

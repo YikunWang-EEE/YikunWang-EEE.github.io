@@ -7,8 +7,9 @@
   <meta name="theme-color" content="#fafaf7">
   <title>Yikun Wang | HKU ECE</title>
   <link rel="icon" href="assets/images/academic-avatar.svg?v=20260718-7" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260721-9">
-  <script src="script.js?v=20260721-9" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20260726-10">
+  <script src="gallery-data.js?v=20260726-10" defer></script>
+  <script src="script.js?v=20260726-10" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -303,7 +304,8 @@
         <p class="section-index" aria-hidden="true">📸</p>
         <div><p class="eyebrow">Research in view</p><h2 id="gallery-title">Gallery</h2></div>
       </div>
-      <p class="section-placeholder">To be added.</p>
+      <div class="gallery-collections" id="gallery-collections"></div>
+      <noscript><p class="section-placeholder">Enable JavaScript to view the photo albums.</p></noscript>
     </section>
 
     <section class="section cv-section" id="cv" aria-labelledby="cv-title">
@@ -322,5 +324,19 @@
     <div class="footer-links"><a href="mailto:ykwang@eee.hku.hk">Email</a><a href="https://github.com/YikunWang-EEE" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.eee.hku.hk/" target="_blank" rel="noreferrer">HKU ECE</a></div>
     <p class="copyright">© <span id="year">2026</span> Yikun Wang</p>
   </footer>
+
+  <dialog class="album-dialog" aria-labelledby="album-dialog-title">
+    <div class="album-dialog-shell">
+      <header class="album-dialog-header">
+        <div>
+          <p class="eyebrow" id="album-dialog-group">Gallery</p>
+          <h3 id="album-dialog-title">Photo album</h3>
+          <p class="album-dialog-meta"></p>
+        </div>
+        <button class="album-dialog-close" type="button" aria-label="Close album">×</button>
+      </header>
+      <div class="album-photo-grid"></div>
+    </div>
+  </dialog>
 </body>
 </html>
