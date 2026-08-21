@@ -22,7 +22,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 const navLinks = [...document.querySelectorAll('.site-nav a')];
-const sections = navLinks.map((link) => document.querySelector(link.hash)).filter(Boolean);
+const sections = navLinks.map((link) => link.hash ? document.querySelector(link.hash) : null).filter(Boolean);
 const sectionObserver = new IntersectionObserver((entries) => {
   const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
   if (!visible) return;
