@@ -70,8 +70,10 @@ h1 { margin: 0; font-size: clamp(46px, 5.5vw, 60px); font-weight: 800; line-heig
 .section-heading h2 { margin: 0; font-size: clamp(27px, 3vw, 32px); line-height: 1.1; }
 
 .experience-entry { display: grid; grid-template-columns: 190px minmax(0,1fr); gap: 28px; align-items: center; padding: 22px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.experience-entry + .experience-entry { border-top: 0; }
 .experience-logo { display: grid; place-items: center; min-height: 110px; padding: 18px; border: 1px solid #d9d3e1; border-radius: 8px; background: white; }
 .experience-logo img { width: 158px; height: auto; }
+.experience-logo-wordmark { color: var(--purple); font-family: var(--sans); font-size: 31px; font-weight: 800; letter-spacing: .08em; }
 .experience-details { min-width: 0; }
 .experience-topline { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
 .experience-role { margin: 0 0 5px; color: var(--purple); font-family: var(--mono); font-size: 11px; font-weight: 700; }
