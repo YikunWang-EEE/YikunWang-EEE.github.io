@@ -75,6 +75,7 @@ h1 { margin: 0; font-size: clamp(46px, 5.5vw, 60px); font-weight: 800; line-heig
 .experience-logo img { width: 158px; height: auto; }
 .experience-logo--jiiov { padding: 0; overflow: hidden; background: #000; }
 .experience-logo--jiiov img { display: block; width: 100%; height: 110px; object-fit: contain; }
+.experience-logo--shared { min-height: 135px; gap: 8px; padding: 12px; }
 .experience-details { min-width: 0; }
 .experience-topline { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; }
 .experience-role { margin: 0 0 5px; color: var(--purple); font-family: var(--mono); font-size: 11px; font-weight: 700; }
